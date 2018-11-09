@@ -1,0 +1,39 @@
+Hello! If you want to try the SymMat class out, download
+my repository and execute the main.exe file. It will
+kind of guide you through what the class can do using the 
+terminal. 
+
+The debug.exe file contains most of the operations that
+the class can perform. I used it to try everything out
+and decided do let it stay here as  someone might want to use it,
+but it is not intended to be used!
+
+If you want to compile the files, you can use the included Makefile.
+Open the terminal in the folder that contains all the files and execute
+	$make
+Which will create the executables from the main.cc and debug.cc
+Or use
+	$make clean
+to delete both executables.
+
+(make essentially does this:
+	$g++ main.cc -o main.exe -std=c++11
+	$g++ debug.cc -o debug.exe -std=c++11
+so you can use these commands to manually compile everything)
+
+
+
+To use the class in a program, just add 
+	$#include "symMat.hh"
+to your code (Do not put the dollar sign). 
+
+Take into accound that if you have Eigen installed,
+instead of copying the Eigen folder to your program's
+directory you may change the 
+	$#include "Eigen/Dense"
+	$#include "Eigen/Core" 
+to
+	$#include <Eigen/Dense>
+	$#include <Eigen/Core>
+
+Thank you for reading this. I hope it is useful!
